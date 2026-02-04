@@ -40,10 +40,12 @@ def convertisseur(hauteur,largeur):
     letre=0
     stop=False
     y=0
-    while y <=hauteur-1 or stop==False:
+    hauteur=hauteur
+    largeur=largeur
+    while y <=hauteur and stop==False:
         x=0
         if stop==False:
-            while x <=largeur-1 or stop==False:
+            while x <=largeur and stop==False:
                 if message[letre-1]=="a":
                    img.putpixel( (x,y) , (r+1,v+0,b+0) )
                    x=x+1
@@ -157,10 +159,6 @@ def convertisseur(hauteur,largeur):
                 x=x+1
         
         y=y+1
-
-
-
-
 
 
 

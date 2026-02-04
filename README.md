@@ -11,7 +11,7 @@ This is a python project for fun
  
 
 ## Dependencies
-- PIL (an fork of pilow)
+- PIL (the new name of pillow)
 
 ## Future additions
 bug corection and sistem improve
