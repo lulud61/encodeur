@@ -1,7 +1,6 @@
 from PIL import Image
 
 def image(nom_image):
-    global img
     img = Image.open(nom_image)
     largeur = img.width
     hauteur = img.height
