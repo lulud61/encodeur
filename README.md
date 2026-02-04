@@ -1,21 +1,22 @@
-# Routeur Heros
+# encodeur stegonographique
 
-This is a python project for an event in the [French Mindustry Discord](https://discord.com/invite/hzGPWhZSGV).
-You are playing a router whose goal is to distribute copper to duo turrets to kill the incoming flares.
+This is a python project for fun
 
-Good luck saving the core!
 
 ## Installation
 1. clone the repository
 2. install the dependencies
-3. run `routeur_hero.py` using python
+3. put the path of the image file you want on the function image()
+4. run `encodeur.py` using python
+ 
 
 ## Dependencies
-- [pygame](https://www.pygame.org/news)
+- PIL (an fork of pilow)
 
 ## Future additions
-why not for some upgrade
+bug corection and sistem improve
+graphic interface maybe
 
 
 ## Thanks
-thanks to @MxPerrot who taught me how to use git
+thx to my electricity compani to let me use my computer :)
