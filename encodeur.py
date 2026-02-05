@@ -56,60 +56,10 @@ def convertisseur(hauteur,largeur):
                 r=int(L[0])
                 v=int(L[1])
                 b=int(L[2])
-                if message[letre]=="a":
-                    changement(dico["a"],r,v,b,x,y)
-                elif message[letre]=="b":
-                    changement(dico["b"],r,v,b,x,y)
-                elif message[letre]=="c":
-                    changement(dico["c"],r,v,b,x,y)
-                elif message[letre]=="d":
-                    changement(dico["d"],r,v,b,x,y)
-                elif message[letre]=="e":
-                    changement(dico["e"],r,v,b,x,y)
-                elif message[letre]=="f":
-                    changement(dico["f"],r,v,b,x,y)
-                elif message[letre]=="g":
-                    changement(dico["g"],r,v,b,x,y)
-                elif message[letre]=="h":
-                    changement(dico["h"],r,v,b,x,y)
-                elif message[letre]=="i":
-                    changement(dico["i"],r,v,b,x,y)
-                elif message[letre]=="j":
-                    changement(dico["j"],r,v,b,x,y)
-                elif message[letre]=="k":
-                    changement(dico["k"],r,v,b,x,y)
-                elif message[letre]=="l":
-                    changement(dico["l"],r,v,b,x,y)
-                elif message[letre]=="m":
-                    changement(dico["m"],r,v,b,x,y)
-                elif message[letre]=="n":
-                    changement(dico["n"],r,v,b,x,y)
-                elif message[letre]=="o":
-                    changement(dico["o"],r,v,b,x,y)
-                elif message[letre]=="p":
-                    changement(dico["p"],r,v,b,x,y)
-                elif message[letre]=="q":
-                    changement(dico["q"],r,v,b,x,y)
-                elif message[letre]=="r":
-                    changement(dico["r"],r,v,b,x,y)
-                elif message[letre]=="s":
-                    changement(dico["s"],r,v,b,x,y)
-                elif message[letre]=="t":
-                    changement(dico["t"],r,v,b,x,y)
-                elif message[letre]=="u":
-                    changement(dico["u"],r,v,b,x,y)
-                elif message[letre]=="v":
-                    changement(dico["v"],r,v,b,x,y)
-                elif message[letre]=="w":
-                    changement(dico["w"],r,v,b,x,y)
-                elif message[letre]=="x":
-                    changement(dico["x"],r,v,b,x,y)
-                elif message[letre]=="y":
-                    changement(dico["y"],r,v,b,x,y)
-                elif message[letre]=="z":
-                    changement(dico["z"],r,v,b,x,y)
-                elif message[letre]==" ":
-                    changement(dico[" "],r,v,b)
+                for k in dico.keys():
+                    if message[letre]==k:
+                        changement(dico[k],r,v,b,x,y)
+                
                 
                 
                 if letre >=fin:
