@@ -19,10 +19,4 @@ graphic interface maybe
 
 
 ## Thanks
-<<<<<<< HEAD
 thx to my electricity company to let me use my computer :)
-=======
-thx to my electricity company to let me use my computer :)
-
-`frog.png`: public domain - https://commons.wikimedia.org/wiki/File:Edenton_NFH_gopher_frog_artificial_lily_pad_29_November_2021.png
->>>>>>> fea93d5533fe631b65735887ae9f23aae86260b4
