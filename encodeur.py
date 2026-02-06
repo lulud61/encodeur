@@ -46,7 +46,7 @@ def convertisseur(hauteur,largeur):
                 b=int(L[2])
                 
                 for k in dico.keys():
-                    if message[letre]==k:
+                    if message[lettre]==k:
                         changement(dico[k],r,v,b,x,y)
                 
                 if lettre>=fin:
@@ -96,6 +96,7 @@ img.show()
 print("fini")
 
 #to see the valeur of pixel (for debug lol)
-#for i in range(10):
-#    t=img.getpixel((i,0))
-#    print(t[0],t[1],t[2])
+#for ytest in range(2):
+#    for xtest in range(128):
+#        t=img.getpixel((xtest,ytest))
+#        print(t[0],t[1],t[2])
