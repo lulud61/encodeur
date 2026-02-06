@@ -36,10 +36,17 @@ def convertisseur(hauteur,largeur):
     lettre=0
     stop=False
     y=0
+<<<<<<< HEAD
     while y<hauteur and not stop:
         x=0
         if not stop:
             while x<largeur and not stop:
+=======
+    while y<=hauteur and not stop:
+        x=0
+        if not stop:
+            while x<=largeur and not stop:
+>>>>>>> fea93d5533fe631b65735887ae9f23aae86260b4
                 L=img.getpixel((x,y))
                 r=int(L[0])
                 v=int(L[1])
