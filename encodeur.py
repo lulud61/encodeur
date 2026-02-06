@@ -15,59 +15,46 @@ def reset(largeur,hauteur): #rend toute les valeur rgb pair (represente le zero)
             v=int(L[1])
             b=int(L[2])
 
-            if r%2==1:
-                new_r=r-1
-            else:
-                new_r=r
-            if v%2==1:
-                new_v=v-1
-            else:
-                new_v=v
-            if b%2==1:
-                new_b=b-1
-            else:
-                new_b=b
+            new_r=r-r%2
+            new_v=v-v%2
+            new_b=b-b%2
 
             img.putpixel( (x,y) , (new_r,new_v,new_b) )
 
 
 def changement(dico,r,v,b,x,y):
-    img.putpixel( (x,y) , (r+dico[0][0],v+dico[0][1],b+dico[0][2]) )
+    img.putpixel( (x,y) , (r+dico[0][0], v+dico[0][1], b+dico[0][2]) )
     x+=1
-    img.putpixel( (x,y) , (r+dico[1][0],v+dico[1][1],b+dico[1][2]) )
+    img.putpixel( (x,y) , (r+dico[1][0], v+dico[1][1], b+dico[1][2]) )
 
 
 
 def convertisseur(hauteur,largeur):
+    global x, y
     message=input("inserer le message:")
     fin=len(message)-1
-    letre=0
+    lettre=0
     stop=False
-    global x
-    global y
     y=0
-    while y <hauteur and stop==False:
+    while y<hauteur and not stop:
         x=0
-        if stop==False:
-            while x <largeur and stop==False:
+        if not stop:
+            while x<largeur and not stop:
                 L=img.getpixel((x,y))
                 r=int(L[0])
                 v=int(L[1])
                 b=int(L[2])
+                
                 for k in dico.keys():
-                    if message[letre]==k:
+                    if message[lettre]==k:
                         changement(dico[k],r,v,b,x,y)
                 
-                
-                
-                if letre >=fin:
+                if lettre>=fin:
                     stop=True
                 else:
-                    letre=letre+1
+                    lettre+=1
                 x+=2
-        
         y+=1
-
 
 
 dico={
@@ -98,8 +85,7 @@ dico={
     "y":[[1,1,1],[0,1,1]],
     "z":[[1,0,1],[0,1,1]],
     " ":[[0,0,0],[0,0,0]]
-    }
-
+}
 
 
 img,largeur,hauteur=image("frog.png")
