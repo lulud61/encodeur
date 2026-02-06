@@ -33,7 +33,7 @@ def reset(largeur,hauteur): #rend toute les valeur rgb pair (represente le zero)
 
 def changement(dico,r,v,b,x,y):
     img.putpixel( (x,y) , (r+dico[0][0],v+dico[0][1],b+dico[0][2]) )
-    x=x+1
+    x+=1
     img.putpixel( (x,y) , (r+dico[1][0],v+dico[1][1],b+dico[1][2]) )
 
 
@@ -46,12 +46,10 @@ def convertisseur(hauteur,largeur):
     global x
     global y
     y=0
-    hauteur=hauteur
-    largeur=largeur
-    while y <=hauteur and stop==False:
+    while y <hauteur and stop==False:
         x=0
         if stop==False:
-            while x <=largeur and stop==False:
+            while x <largeur and stop==False:
                 L=img.getpixel((x,y))
                 r=int(L[0])
                 v=int(L[1])
@@ -66,9 +64,9 @@ def convertisseur(hauteur,largeur):
                     stop=True
                 else:
                     letre=letre+1
-                x=x+2
+                x+=2
         
-        y=y+1
+        y+=1
 
 
 
@@ -112,6 +110,7 @@ img.show()
 print("fini")
 
 #to see the valeur of pixel (for debug lol)
-#for i in range(10):
-#    t=img.getpixel((i,0))
-#    print(t[0],t[1],t[2])
+#for ytest in range(2):
+#    for xtest in range(128):
+#        t=img.getpixel((xtest,ytest))
+#        print(t[0],t[1],t[2])
